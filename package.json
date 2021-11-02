@@ -2,6 +2,7 @@
   "name": "form",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://petrrosetrr.github.io/form-demo",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -13,6 +14,7 @@
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-mount-animation": "^0.0.9",
@@ -24,6 +26,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
