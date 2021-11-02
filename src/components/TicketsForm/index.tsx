@@ -1,5 +1,5 @@
-import {Formik, Form, FieldArray, Field, ErrorMessage, withFormik, useFormik, FormikHelpers} from 'formik';
-import React, {useCallback, useEffect} from 'react';
+import {Formik, Form, FieldArray, FormikHelpers} from 'formik';
+import React, {useState} from 'react';
 import Fieldset from "../Fieldset";
 import styles from './index.module.scss';
 import * as Yup from 'yup';
@@ -60,22 +60,24 @@ export const validationSchema = Yup.object().shape({
 });
 
 const TicketsForm = () => {
-
-    const submitHandler = useCallback(async (formData: IForm, helpers: FormikHelpers<IForm>) => {
+    const [error, setError] = useState(false);
+    const submitHandler = async (formData: IForm, helpers: FormikHelpers<IForm>) => {
         try {
             await axios.post('https://webhook.site/d50f48dc-3a5b-4228-b600-8998aec0c130', formData);
             helpers.resetForm();
+            setError(false)
         }
         catch (error) {
-
+            setError(true);
         }
-    }, []);
+    };
+
     return (
         <Formik initialValues={initialValues} onSubmit={submitHandler} validationSchema={validationSchema}>
             {
-                ({values, errors, touched, resetForm, isSubmitting}) => (
+                ({values, isSubmitting}) => (
 
-                    <Form className={cn(styles.main, {[styles.disabled]: isSubmitting})}>
+                    <Form className={cn(styles.main, {[styles.disabled]: isSubmitting})} onChange={() => setError(false)}>
                         <FieldArray name='passengers'>
                             {
                                 ({push, remove}) => (
@@ -106,6 +108,12 @@ const TicketsForm = () => {
                                                 <button className={styles.submit} type='submit'>Отправить форму</button>
                                             }
                                         </div>
+                                        {
+
+                                        }
+                                        {
+                                            error && <p className={styles.error}>Ошибка отправки формы :(</p>
+                                        }
                                     </>
                                 )
                             }

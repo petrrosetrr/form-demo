@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styles from './index.module.scss';
 import TicketsForm from "../TicketsForm";
 import Container from "../Container";
