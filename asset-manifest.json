@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/form-demo/static/css/main.308cc275.chunk.css",
+    "main.js": "/form-demo/static/js/main.6711a793.chunk.js",
+    "main.js.map": "/form-demo/static/js/main.6711a793.chunk.js.map",
+    "runtime-main.js": "/form-demo/static/js/runtime-main.31721a72.js",
+    "runtime-main.js.map": "/form-demo/static/js/runtime-main.31721a72.js.map",
+    "static/css/2.081c3c00.chunk.css": "/form-demo/static/css/2.081c3c00.chunk.css",
+    "static/js/2.6f78add4.chunk.js": "/form-demo/static/js/2.6f78add4.chunk.js",
+    "static/js/2.6f78add4.chunk.js.map": "/form-demo/static/js/2.6f78add4.chunk.js.map",
+    "index.html": "/form-demo/index.html",
+    "static/css/2.081c3c00.chunk.css.map": "/form-demo/static/css/2.081c3c00.chunk.css.map",
+    "static/css/main.308cc275.chunk.css.map": "/form-demo/static/css/main.308cc275.chunk.css.map",
+    "static/js/2.6f78add4.chunk.js.LICENSE.txt": "/form-demo/static/js/2.6f78add4.chunk.js.LICENSE.txt",
+    "static/media/RZD.a647e951.svg": "/form-demo/static/media/RZD.a647e951.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.31721a72.js",
+    "static/css/2.081c3c00.chunk.css",
+    "static/js/2.6f78add4.chunk.js",
+    "static/css/main.308cc275.chunk.css",
+    "static/js/main.6711a793.chunk.js"
+  ]
+}
