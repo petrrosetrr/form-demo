@@ -1,0 +1,27 @@
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: all .2s linear;
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+    .buttons {
+        display: flex;
+        gap: 15px;
+    }
+    .button {
+        background-color: #eaeaea;
+        padding: 10px 15px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .submit {
+        @extend .button;
+        background-color: #C4151C;
+        color: white;
+    }
+}

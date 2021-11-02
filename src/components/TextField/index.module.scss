@@ -1,0 +1,38 @@
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    .asterisk {
+        font-weight: 500;
+        color: #C4151C;
+    }
+    .input {
+        height: 40px;
+        padding: 10px 8px;
+        border-radius: 5px;
+        border: 1px solid #eaeaea;
+        transition: all .2s linear;
+        &:focus {
+            border-color: #aaa8a8;
+        }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+        &.error {
+            border-color: #C4151C;
+            background-color: rgba(210, 50, 56, 0.1);
+        }
+    }
+    .error_hint {
+        min-height: 12px;
+        font-size: 12px;
+        line-height: 12px;
+        color: #C4151C;
+    }
+}
