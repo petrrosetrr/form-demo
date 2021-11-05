@@ -6,8 +6,10 @@ import * as Yup from 'yup';
 import Fade from "../Fade";
 import cn from "classnames";
 import axios from "axios";
+import {nanoid} from "nanoid";
 
 export interface IPassenger {
+    id: string;
     snils: string;
     name: string;
     surname: string;
@@ -26,6 +28,7 @@ interface IForm {
 }
 
 const createPassenger = () => ({
+    id: nanoid(),
     name: '',
     surname: '',
     patronymic: '',
@@ -84,9 +87,8 @@ const TicketsForm = () => {
                                     <>
                                         {
                                             values.passengers.map((passenger, index) => (
-                                                <Fade show={true} key={index}>
+                                                <Fade show={true} key={passenger.id}>
                                                     <Fieldset
-                                                        key={index}
                                                         passenger={passenger}
                                                         remove={() => remove(index)}
                                                         index={index}/>
